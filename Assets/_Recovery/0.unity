@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 056e51e0cca91a14483514fe4cc5b296, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.011
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 056e51e0cca91a14483514fe4cc5b296, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1958,33 +1958,6 @@ Transform:
   - {fileID: 1286302605}
   m_Father: {fileID: 1334964288}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &202513709 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 740720418601702516, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-  m_PrefabInstance: {fileID: 209741268}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &202513713
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 202513709}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5596962893442247291, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
 --- !u!1 &206784061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,21 +2159,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -8212063062777003511, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 670777595}
-    - targetCorrespondingSourceObject: {fileID: 740720418601702516, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 202513713}
-    - targetCorrespondingSourceObject: {fileID: 9202846595681545629, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1392009028}
-    - targetCorrespondingSourceObject: {fileID: -9058712615221707594, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 322458380}
-    - targetCorrespondingSourceObject: {fileID: 4571896828021734462, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 221568716}
+      addedObject: {fileID: 1155109502}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
 --- !u!4 &209741269 stripped
 Transform:
@@ -2391,33 +2352,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1772390885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &221568712 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4571896828021734462, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-  m_PrefabInstance: {fileID: 209741268}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &221568716
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221568712}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1388540979731245082, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
 --- !u!1 &225494694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,33 +3106,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!1 &322458376 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -9058712615221707594, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-  m_PrefabInstance: {fileID: 209741268}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &322458380
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322458376}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8881597613447578184, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
 --- !u!1 &328153847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6014,33 +5921,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1669035565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &670777593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -8212063062777003511, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-  m_PrefabInstance: {fileID: 209741268}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &670777595
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670777593}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &674508004
 GameObject:
   m_ObjectHideFlags: 0
@@ -10359,6 +10239,33 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2330574551839645248, guid: 4d3a5cff968cf364ab6e2abd159e6fb5, type: 3}
+--- !u!1 &1155109501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6689036041284674117, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
+  m_PrefabInstance: {fileID: 209741268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1155109502
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155109501}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1157025977
 GameObject:
   m_ObjectHideFlags: 0
@@ -13272,33 +13179,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2049998165076221786, guid: 26ab0aa3023b96a499de62deb11277be, type: 3}
---- !u!1 &1392009024 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9202846595681545629, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
-  m_PrefabInstance: {fileID: 209741268}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1392009028
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392009024}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1426001722595151353, guid: af9e7cc6917990f4bb740555daaa4ccd, type: 3}
 --- !u!1 &1393238298
 GameObject:
   m_ObjectHideFlags: 0
@@ -18553,14 +18433,14 @@ MonoBehaviour:
   riesgos:
   - id: Aceite
     puntoGuia: {fileID: 85336014}
-    mensaje: "Bid\xF3n volcado con derrame de aceite. Riesgo de resbal\xF3n y ca\xEDda.
-      Coge las balizas de suelo h\xFAmedo y col\xF3cala sobre las zonas marcadas
-      junto al derrame."
+    mensaje: "Bid\xF3n volcado con derrame de aceite suelo resbaladizo. Busca las
+      balizas de suelo h\xFAmedo y col\xF3cala sobre las zonas marcadas junto al
+      derrame."
     cantidadRequerida: 2
   - id: Tropiezo
     puntoGuia: {fileID: 1548775986}
-    mensaje: "Objetos sueltos en el suelo, riesgo de tropiezo. Rec\xF3ge 3 objetos
-      y col\xF3calos sobre el carro de herramientas."
+    mensaje: "Falta de orden y limpieza, riesgo de ca\xEDdas al mismo nivel. Recoge
+      3 objetos y col\xF3calos sobre el carro de herramientas."
     cantidadRequerida: 3
   texto: {fileID: 328153849}
   panelHUD: {fileID: 111567211}
@@ -19616,7 +19496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb6f6114f78a56746a674e6bbecee7af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eb6f6114f78a56746a674e6bbecee7af, type: 3}
       propertyPath: m_LocalPosition.z

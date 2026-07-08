@@ -57,10 +57,10 @@ public class SecuenciaRiesgos : MonoBehaviour
         var objetivo = riesgos[pasoActual].puntoGuia;
 
         Vector3 inicio = jugador.position;
-        inicio.y = 0.05f;
+        inicio.y = 0.15f;
 
         Vector3 fin = objetivo.position;
-        fin.y = 0.05f;
+        fin.y = 0.15f;
 
         lineaGuia.SetPosition(0, inicio);
         lineaGuia.SetPosition(1, fin);
