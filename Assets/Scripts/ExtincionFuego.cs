@@ -31,6 +31,7 @@ public class ExtincionFuego : MonoBehaviour
         fuego.SetActive(false);
         puerta.SetActive(false);
         baseObjeto.SetActive(false);
+        sonidoExtintor.Stop();
 
         SecuenciaRiesgos.Instancia.ResolverRiesgo(riesgoId);
     }

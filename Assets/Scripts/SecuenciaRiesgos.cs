@@ -12,6 +12,7 @@ public class SecuenciaRiesgos : MonoBehaviour
         public Transform puntoGuia;
         public string mensaje;
         public int cantidadRequerida = 1;
+        public string mensajeInicio;
     }
 
     public Riesgo[] riesgos;
@@ -44,7 +45,8 @@ public class SecuenciaRiesgos : MonoBehaviour
 
     void ActivarRiesgoActual()
     {
-        texto.text = "Dirigete al punto marcado";
+        string msg = string.IsNullOrEmpty(riesgos[pasoActual].mensajeInicio) ? "Dirigete al punto marcado" : riesgos[pasoActual].mensajeInicio;
+        texto.text = msg;
         sonidoBeep.Play();
         lineaGuia.enabled = true;
         lineaActiva = true;
@@ -57,7 +59,7 @@ public class SecuenciaRiesgos : MonoBehaviour
         var objetivo = riesgos[pasoActual].puntoGuia;
 
         Vector3 inicio = jugador.position;
-        inicio.y -= 1.5f;
+        inicio.y -= 0.5f;
 
         Vector3 fin = objetivo.position;
         fin.y += 0.5f;
@@ -70,6 +72,7 @@ public class SecuenciaRiesgos : MonoBehaviour
             lineaGuia.enabled = false;
             lineaActiva = false;
             texto.text = riesgos[pasoActual].mensaje;
+            sonidoBeep.Play();
         }
     }
 
