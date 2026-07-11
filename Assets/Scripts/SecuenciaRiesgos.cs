@@ -45,7 +45,7 @@ public class SecuenciaRiesgos : MonoBehaviour
 
     void ActivarRiesgoActual()
     {
-        string msg = string.IsNullOrEmpty(riesgos[pasoActual].mensajeInicio) ? "Dirigete al punto marcado" : riesgos[pasoActual].mensajeInicio;
+        string msg = string.IsNullOrEmpty(riesgos[pasoActual].mensajeInicio) ? "Dirígete al punto marcado" : riesgos[pasoActual].mensajeInicio;
         texto.text = msg;
         sonidoBeep.Play();
         lineaGuia.enabled = true;
@@ -62,7 +62,7 @@ public class SecuenciaRiesgos : MonoBehaviour
         inicio.y -= 0.5f;
 
         Vector3 fin = objetivo.position;
-        fin.y += 0.5f;
+        fin.y += 0.4f;
 
         lineaGuia.SetPosition(0, inicio);
         lineaGuia.SetPosition(1, fin);

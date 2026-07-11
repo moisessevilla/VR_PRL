@@ -31,7 +31,7 @@ public class SecuenciaEPIs : MonoBehaviour
     void Start()
     {
         texto.color = colorCorrecto;
-        texto.text = "Empezamos, primero busca y colócate: " + orden[pasoActual];
+        texto.text = "Empecemos, primero busca y colócate: " + orden[pasoActual];
     }
 
     public void IntentarColocar(string epiId, GameObject objeto)
@@ -46,7 +46,8 @@ public class SecuenciaEPIs : MonoBehaviour
 
             if (pasoActual >= orden.Length)
             {
-                texto.text = "Equipo completo. Ya puedes salir del vestuario";
+                texto.text = "Equipación completadada.\n" +
+                "Ya puedes salir del vestuario";
                 cartel.SetActive(false);
                 puertaTransform.localEulerAngles = new Vector3(0, 90, 0);
                 sonidoWin.Play();

@@ -90,18 +90,18 @@ public class SecuenciaR6 : MonoBehaviour
         mascaraGas.SetActive(true);
         puertaBloqueo.SetActive(true);
 
-        Mensaje("Riesgo actualizado, se ha encontrado riesgo de intoxicacion, abandona la sala inmediatamente");
+        Mensaje("Riesgo actualizado, se ha encontrado riesgo de intoxicación, abandona la sala inmediatamente");
 
         yield return EsperarLlegada(puertaBloqueo.transform);
 
         sonidoTokTok.Play();
         yield return new WaitForSeconds(sonidoTokTok.clip.length);
 
-        Mensaje("Rapido, busca una mascara de gas, peligro de muerte inminente!");
+        Mensaje("Rápido, busca una máscara de gas, peligro de muerte inminente!");
 
         yield return new WaitForSeconds(4f);
 
-        Mensaje("Mascara de gas en el techo inaccesible, busca una salida alternativa.");
+        Mensaje("Máscara de gas inaccesible en el techo, busca una salida alternativa.");
 
         yield return EsperarLlegada(baseNormal);
 
@@ -125,13 +125,14 @@ public class SecuenciaR6 : MonoBehaviour
         yield return new WaitForSeconds(3f);
         mascaraGasClon.SetActive(false);
 
-        Mensaje("Perfecto, mascara de gas colocada, busca una salida para terminar el riesgo de intoxicacion");
+        Mensaje("Perfecto, máscara de gas colocada, busca una salida para terminar el riesgo de intoxicación");
 
         yield return EsperarLlegada(baseClon2);
 
         sonidoOUT.Play();
         puertaBloqueo.SetActive(false);
         puertaDimensionalNormal.SetActive(true);
+        mascaraGas.SetActive(false);
         Teletransportar(baseNormal);
 
         yield return EsperarLlegada(puertaDimensionalNormal.transform);
@@ -147,14 +148,18 @@ public class SecuenciaR6 : MonoBehaviour
         panelHUD.SetActive(true);
         sonidoCaida.Stop();
         sonidoMatrix.Play();
-        Mensaje("Alguna vez has tenido un sueno que parecia tan real que no podias distinguirlo de la realidad?");
+        Mensaje("Alguna vez has tenido un sueñoo que parecia tan real, que no podías distinguirlo de la realidad?");
 
         yield return EsperarLlegada(baseMatrixMIB);
 
         sonidoBang.Play();
         panelHUD.SetActive(false);
         pantallaFinal.SetActive(true);
-        textoFinal.text = "Simulación Finalizada. TFM Máster en Industria 4.0 - Realizado por Moisés Sevilla Corrales - Curso 2025-2026.";
+        textoFinal.text =  "Simulación Finalizada\n" +
+                            "TFM VIU - Máster en Industria 4.0\n" +
+                            "Alumno: Moisés Sevilla Corrales\n" +
+                            "Tutor: Salva Aparici Martínez\n" +
+                            "Curso 2025-2026";
     }
 
     [Header("Fase 2 - Referencias")]
