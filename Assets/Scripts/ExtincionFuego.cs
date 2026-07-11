@@ -7,7 +7,6 @@ public class ExtincionFuego : MonoBehaviour
     public AudioSource sonidoExtintor;
     public GameObject fuego;
     public GameObject puerta;
-
     public GameObject baseObjeto;
     private bool activado = false;
 

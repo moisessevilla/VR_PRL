@@ -6,7 +6,7 @@ public class SecuenciaEPIs : MonoBehaviour
     public static SecuenciaEPIs Instancia;
 
     [Header("Orden de la secuencia")]
-    public string[] orden = { "Chaleco", "Casco", "Gafas", "Earmuff", "Guantes", "Botas" };
+    public string[] orden = { "Chaleco", "Gafas", "Protección auditiva", "Botas", "Casco","Guantes"};
     private int pasoActual = 0;
 
     [Header("Referencias")]
@@ -46,7 +46,7 @@ public class SecuenciaEPIs : MonoBehaviour
 
             if (pasoActual >= orden.Length)
             {
-                texto.text = "Equipación completadada.\n" +
+                texto.text = "Equipación completada.\n" +
                 "Ya puedes salir del vestuario";
                 cartel.SetActive(false);
                 puertaTransform.localEulerAngles = new Vector3(0, 90, 0);
@@ -57,12 +57,11 @@ public class SecuenciaEPIs : MonoBehaviour
                 sonidoOK.Play();
                 texto.text = "Busca y colócate: " + orden[pasoActual];
             }
+            return;
         }
-        else
-        {
-            sonidoError.Play();
-            texto.color = colorError;
-            texto.text = "Orden incorrecto. Busca primero: " + orden[pasoActual];
-        }
+        
+        sonidoError.Play();
+        texto.color = colorError;
+        texto.text = "Orden incorrecto. Busca primero: " + orden[pasoActual];
     }
 }

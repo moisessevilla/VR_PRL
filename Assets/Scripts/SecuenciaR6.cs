@@ -9,23 +9,54 @@ public class SecuenciaR6 : MonoBehaviour
     [Header("HUD")]
     public TextMeshProUGUI texto;
     public AudioSource sonidoBeep;
+    public GameObject panelHUD;
 
-    [Header("Objetos Sala Normal")]
+    [Header("Jugador y Teletransporte")]
+    public Transform jugador;
+    public Transform raizJugador;
+    public Transform raizCamara;
+    public Behaviour locomotor;
+
+    [Header("Sala Normal")]
     public Rigidbody botellaGas;
     public GameObject humoGas;
     public GameObject evanescencia;
     public GameObject mascaraGas;
     public GameObject puertaBloqueo;
     public Transform baseBotella;
-    public Behaviour locomotor;
-    public AudioSource sonidoOK;
-    public GameObject mascaraGasClon;
-
-    [Header("Sonidos Fase 1")]
+    public Transform baseNormal;
+    public Transform baseInicioDestino;
     public AudioSource sonidoBotella;
     public AudioSource sonidoGas;
+    public AudioSource sonidoTokTok;
+
+    [Header("Sala Clon")]
+    public Transform baseCloneInicio;
+    public Transform baseClon1;
+    public Transform baseClon2;
+    public GameObject gasDimensional;
+    public GameObject mascaraGasClon;
+    public GameObject puertaDimensionalNormal;
+
+    [Header("Sala Matrix")]
+    public Transform baseMatrixInicio;
+    public Transform baseMatrixSillon;
+    public Transform baseMatrixMIB;
+    public AudioSource sonidoCaida;
+    public AudioSource sonidoMatrix;
+    public AudioSource sonidoBang;
+
+    [Header("Sonidos Generales")]
+    public AudioSource sonidoOK;
+    public AudioSource sonidoIN;
+    public AudioSource sonidoOUT;
+
+    [Header("Pantalla Final")]
+    public GameObject pantallaFinal;
+    public TextMeshProUGUI textoFinal;
 
     private string eventoRecibido = "";
+    private const float radioZona = 1.5f;
 
     void Awake()
     {
@@ -51,10 +82,12 @@ public class SecuenciaR6 : MonoBehaviour
         }
     }
 
-    void Mensaje(string msg)
+    IEnumerator EsperarLlegada(Transform destino)
     {
-        texto.text = msg;
-        sonidoBeep.Play();
+        while (Vector3.Distance(jugador.position, destino.position) > radioZona)
+        {
+            yield return null;
+        }
     }
 
     IEnumerator EsperarCaidaBotella()
@@ -63,6 +96,19 @@ public class SecuenciaR6 : MonoBehaviour
         {
             yield return null;
         }
+    }
+
+    void Mensaje(string msg)
+    {
+        texto.text = msg;
+        sonidoBeep.Play();
+    }
+
+    void Teletransportar(Transform destino)
+    {
+        locomotor.enabled = false;
+        raizJugador.position = destino.position;
+        locomotor.enabled = true;
     }
 
     IEnumerator Secuencia()
@@ -87,7 +133,6 @@ public class SecuenciaR6 : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         evanescencia.SetActive(true);
-        mascaraGas.SetActive(true);
         puertaBloqueo.SetActive(true);
 
         Mensaje("Riesgo actualizado, se ha encontrado riesgo de intoxicación, abandona la sala inmediatamente");
@@ -103,6 +148,7 @@ public class SecuenciaR6 : MonoBehaviour
 
         Mensaje("Máscara de gas inaccesible en el techo, busca una salida alternativa.");
 
+        mascaraGas.SetActive(true);
         yield return EsperarLlegada(baseNormal);
 
         sonidoIN.Play();
@@ -148,60 +194,18 @@ public class SecuenciaR6 : MonoBehaviour
         panelHUD.SetActive(true);
         sonidoCaida.Stop();
         sonidoMatrix.Play();
-        Mensaje("Alguna vez has tenido un sueñoo que parecia tan real, que no podías distinguirlo de la realidad?");
+        Mensaje("Alguna vez has tenido un sueño que parecia tan real, que no podías distinguirlo de la realidad?");
 
         yield return EsperarLlegada(baseMatrixMIB);
 
         sonidoBang.Play();
         panelHUD.SetActive(false);
+        yield return new WaitForSeconds(0.7f);
         pantallaFinal.SetActive(true);
-        textoFinal.text =  "Simulación Finalizada\n" +
-                            "TFM VIU - Máster en Industria 4.0\n" +
-                            "Alumno: Moisés Sevilla Corrales\n" +
-                            "Tutor: Salva Aparici Martínez\n" +
-                            "Curso 2025-2026";
-    }
-
-    [Header("Fase 2 - Referencias")]
-    public Transform jugador;
-    public GameObject gasDimensional;
-    public AudioSource sonidoTokTok;
-    public AudioSource sonidoIN;
-    public AudioSource sonidoOUT;
-    public Transform baseNormal;
-    public Transform baseCloneInicio;
-    public Transform baseClon1;
-    public Transform baseInicioDestino;
-    public Transform baseClon2;
-    public GameObject puertaDimensionalNormal;
-    public Transform baseMatrixInicio;
-    public Transform baseMatrixSillon;
-    public Transform baseMatrixMIB;
-    public AudioSource sonidoCaida;
-    public AudioSource sonidoMatrix;
-    public AudioSource sonidoBang;
-    public GameObject pantallaFinal;
-    public TextMeshProUGUI textoFinal;
-    public GameObject panelHUD;
-
-    [Header("Teletransporte")]
-    public Transform raizJugador;
-    public Transform raizCamara;
-
-    private const float radioZona = 1.5f;
-
-    IEnumerator EsperarLlegada(Transform destino)
-    {
-        while (Vector3.Distance(jugador.position, destino.position) > radioZona)
-        {
-            yield return null;
-        }
-    }
-
-    void Teletransportar(Transform destino)
-    {
-        locomotor.enabled = false;
-        raizJugador.position = destino.position;
-        locomotor.enabled = true;
+        textoFinal.text = "Simulación Finalizada\n" +
+                           "TFM VIU - Máster en Industria 4.0\n" +
+                           "Alumno: Moisés Sevilla Corrales\n" +
+                           "Tutor: Salva Aparici Martínez\n" +
+                           "Curso 2025-2026";
     }
 }
